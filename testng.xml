@@ -1,29 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
+<suite name="Jenkins Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/salih/IdeaProjects/TayfaTestNG">
         <classes>
-            <class name="exelautomation.ReadExcel">
-                <methods>
-                    <include name="test"/>
-                </methods>
-            </class>
-            <class name="tests.AmazonAramaTest">
-                <methods>
-                    <include name="aramaTesti"/>
-                </methods>
-            </class>
-            <class name="tests.BasqarLoginTest">
-                <methods>
-                    <include name="basqarLogin"/>
-                    <include name="basqarNegativLogin"/>
-                </methods>
-            </class>
-            <class name="tests.GoogleAramaTest">
-                <methods>
-                    <include name="amazonTest"/>
-                </methods>
-            </class>
+
             <class name="tests.TableTest">
                 <methods>
                     <include name="tumBasliklar"/>
