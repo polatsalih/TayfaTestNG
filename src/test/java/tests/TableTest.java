@@ -14,7 +14,7 @@ import java.util.List;
 public class TableTest {
 
     W3Schools schools = new W3Schools();
-    String url ="https://www.w3schools.com/html/html_tables.asp";;
+    String url ="https://www.w3schools.com/html/html_tables.asp";
 
     // (priority = 0) siralama yapmak icin en az iki degsken belrtmek getekir
     @Test
@@ -28,7 +28,7 @@ public class TableTest {
         }
     }
 
-    @Test(priority = 0)
+    @Test(priority =0)
     public void tumHucreler(){
         Driver.getDriver().get(url);
         for (WebElement element:schools.hucreler) {
@@ -61,14 +61,14 @@ public class TableTest {
 
         System.out.println(element.getText());
 
-        Assert.assertEquals(element.getText(),"Francisco Chang");
+        Assert.assertEquals(element.getText(),"Francisco Changg");
     }
 
     @Test
     public void sutun(){
 
         Driver.getDriver().get(url);
-String str="";
+String str = "";
         List<WebElement> list= ReusableMethods.getSutun(2);
         for(WebElement element:list){
             str=element.getText();
