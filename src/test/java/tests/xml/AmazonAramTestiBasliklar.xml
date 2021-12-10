@@ -1,0 +1,14 @@
+
+<suite name="All Test Suite">
+    <test  name="C:/Users/salih/IdeaProjects/TayfaTestNG">
+        <classes>
+
+            <class name="tests.AmazonAramaTestBaslklar">
+                <methods>
+                    <include name="AmazonTesti"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>
