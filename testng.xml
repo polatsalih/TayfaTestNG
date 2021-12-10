@@ -9,7 +9,7 @@
                     <include name="tumBasliklar"/>
                     <include name="tumHucreler"/>
                     <include name="tumBasliklarReusableMethods"/>
-                    <include name="satirSutunTesti"/>
+
                     <include name="sutun"/>
                 </methods>
             </class>
