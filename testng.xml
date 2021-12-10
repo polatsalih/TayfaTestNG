@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Jenkins Test Suite">
-    <test verbose="2" preserve-order="true" name="C:/Users/salih/IdeaProjects/TayfaTestNG">
+    <test name="C:/Users/salih/IdeaProjects/TayfaTestNG">
         <classes>
 
             <class name="tests.TableTest">
@@ -11,6 +11,12 @@
                     <include name="tumBasliklarReusableMethods"/>
                     <include name="satirSutunTesti"/>
                     <include name="sutun"/>
+                </methods>
+            </class>
+
+            <class name="tests.AmazonAramaTestBaslklar">
+                <methods>
+                    <include name="AmazonTesti"/>
                 </methods>
             </class>
         </classes>
