@@ -8,7 +8,7 @@ import utilities.ReusableMethods;
 
 import java.util.List;
 
-public class GoogleAramaTest {
+public class AmazonAramaTestBaslklar {
 
     @Test
 
@@ -45,7 +45,7 @@ public class GoogleAramaTest {
 //        Driver.getDriver().navigate().back();
 //        ReusableMethods.sleep(2000);
 //        Driver.getDriver().navigate().forward();
-        ReusableMethods.sleep(2000);
+        ReusableMethods.sleep(1000);
 
         Driver.closeDriver();
     }
