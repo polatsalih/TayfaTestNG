@@ -1,11 +1,14 @@
 package utilities;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
 public class ReusableMethods {
+
+    WebDriverWait wait;
 
     public static void sleep(int miliseconds){
 
@@ -48,4 +51,34 @@ public class ReusableMethods {
        // (//table)[1]//tr[5]/td[2]
         return Driver.getDriver().findElement(By.xpath("(//table)[1]//tr["+satir+"]/td["+sutun+"]"));
     }
+
+
+
+
+    public void scrollToElement(WebElement element) {
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
+    }
+
+
+    public void clickWithJS(WebElement element) {
+        scrollToElement(element);
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].click();", element);
+    }
+
+
+
+
+    public void clickTo(WebElement locator){
+       WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+        try {
+            element.click();
+        } catch (StaleElementReferenceException st){
+            wait.until(ExpectedConditions.refreshed( ExpectedConditions.elementToBeClickable(element))).click();
+        } catch (ElementClickInterceptedException e){
+            clickWithJS(element);
+        }
+    }
+
+
+
 }
